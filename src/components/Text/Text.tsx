@@ -7,19 +7,43 @@ import {
 
 interface TextProps extends RNTextProps {
   preset?: TextVariants;
+  bold?: boolean;
+  italic?: boolean;
+  semiBold?: boolean;
 }
 
 export function Text({
   children,
   preset = 'paragraphMedium',
   style,
+  bold,
+  italic,
+  semiBold,
   ...rest
 }: TextProps) {
+  const fontFamily = getFontFamily(bold, italic, semiBold);
   return (
-    <RNText style={[$fontSizes[preset], style]} {...rest}>
+    <RNText style={[$fontSizes[preset], {fontFamily}, style]} {...rest}>
       {children}
     </RNText>
   );
+}
+
+function getFontFamily(bold?: Boolean, italic?: Boolean, semiBold?: Boolean) {
+  switch (true) {
+    case bold && italic:
+      return $fontFamily.boldItalic;
+    case bold:
+      return $fontFamily.bold;
+    case italic:
+      return $fontFamily.italic;
+    case semiBold && italic:
+      return $fontFamily.mediumItalic;
+    case semiBold:
+      return $fontFamily.medium;
+    default:
+      return $fontFamily.regular;
+  }
 }
 
 type TextVariants =
@@ -41,4 +65,17 @@ const $fontSizes: Record<TextVariants, TextStyle> = {
   paragraphSmall: {fontSize: 14, lineHeight: 19.6},
   paragraphCaption: {fontSize: 12, lineHeight: 16.8},
   paragraphCaptionSmall: {fontSize: 10, lineHeight: 14},
+};
+
+const $fontFamily = {
+  black: 'Poppins-Black',
+  blackItalic: 'Poppins-BlackItalic',
+  bold: 'Poppins-Bold',
+  boldItalic: 'Poppins-BoldItalic',
+  italic: 'Poppins-Italic',
+  light: 'Poppins-Light',
+  lightItalic: 'Poppins-LightItalic',
+  medium: 'Poppins-Medium',
+  mediumItalic: 'Poppins-MediumItalic',
+  regular: 'Poppins-Regular',
 };

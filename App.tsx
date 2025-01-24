@@ -5,7 +5,7 @@ import {Text} from './src/components/Text/Text';
 function App(): React.JSX.Element {
   return (
     <View>
-      <Text>Criando novo app</Text>
+      <Text preset="headingLarge">Criando novo app</Text>
     </View>
   );
 }

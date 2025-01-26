@@ -1,12 +1,16 @@
 import React from 'react';
-import {View} from 'react-native';
-import {Text} from './src/components/Text/Text';
+import {SafeAreaView} from 'react-native';
+import {LoginScreen} from './src/screens/auth/LoginScreen/LoginScreen';
+import {theme} from './src/theme/theme';
+import {ThemeProvider} from '@shopify/restyle';
 
-function App(): React.JSX.Element {
+function App() {
   return (
-    <View>
-      <Text preset="headingLarge">Criando novo app</Text>
-    </View>
+    <ThemeProvider theme={theme}>
+      <SafeAreaView>
+        <LoginScreen />
+      </SafeAreaView>
+    </ThemeProvider>
   );
 }
 

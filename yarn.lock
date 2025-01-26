@@ -2394,6 +2394,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@shopify/restyle@npm:^2.4.4":
+  version: 2.4.4
+  resolution: "@shopify/restyle@npm:2.4.4"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/94426664e20a592a540e5f9473fcc44d52286ee444aa09ff80088cafdd7a3ba3689504cacb319c690b6c272e32e99b523d9584675ab372cc9af9c08dfe4656fd
+  languageName: node
+  linkType: hard
+
 "@sideway/address@npm:^4.1.5":
   version: 4.1.5
   resolution: "@sideway/address@npm:4.1.5"
@@ -2819,6 +2829,7 @@ __metadata:
     "@react-native/eslint-config": "npm:0.77.0"
     "@react-native/metro-config": "npm:0.77.0"
     "@react-native/typescript-config": "npm:0.77.0"
+    "@shopify/restyle": "npm:^2.4.4"
     "@types/jest": "npm:^29.5.13"
     "@types/react": "npm:^18.2.6"
     "@types/react-test-renderer": "npm:^18.0.0"

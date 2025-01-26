@@ -7,7 +7,7 @@ export function LoginScreen() {
   return (
     <View style={{paddingHorizontal: 20}}>
       <Text>Tela de login</Text>
-      <Button title="Botao de login" />
+      <Button backgroundColor="error" title="Botao de login" />
     </View>
   );
 }

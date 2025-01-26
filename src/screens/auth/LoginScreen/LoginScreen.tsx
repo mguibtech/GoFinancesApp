@@ -5,7 +5,7 @@ import {Button} from '../../../components/Button/Button';
 
 export function LoginScreen() {
   return (
-    <View>
+    <View style={{paddingHorizontal: 20}}>
       <Text>Tela de login</Text>
       <Button title="Botao de login" />
     </View>

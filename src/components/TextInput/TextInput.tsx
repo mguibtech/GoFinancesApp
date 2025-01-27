@@ -29,7 +29,7 @@ export function TextInput({
     flexDirection: 'row',
     borderWidth: errorMessage ? 2 : 0,
     borderColor: errorMessage ? 'error' : undefined,
-    padding: 's10',
+    padding: 's14',
     borderRadius: 's20',
   };
 
@@ -40,7 +40,7 @@ export function TextInput({
       </Text>
       <Box {...$textInputContainer}>
         <RNTextInput
-          placeholderTextColor={colors.greenDark}
+          placeholderTextColor={colors.gray1}
           autoCapitalize="none"
           style={$textInputStyle}
           {...textInputProps}
@@ -64,6 +64,10 @@ const $textInputStyle: TextStyle = {
   flexGrow: 1,
   flexShrink: 1,
   padding: 0,
+  marginLeft: 15,
+  textAlignVertical: 'center',
+  // backgroundColor: "#000",
+  color: '#093030',
   fontFamily: $fontFamily.regular,
   ...$fontSizes.paragraphMedium,
 };

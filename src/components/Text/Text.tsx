@@ -86,7 +86,7 @@ export const $fontSizes: Record<TextVariants, TextStyle> = {
   paragraphCaptionSmall: {fontSize: 10, lineHeight: 14},
 };
 
-const $fontFamily = {
+export const $fontFamily = {
   black: 'Poppins-Black',
   blackItalic: 'Poppins-BlackItalic',
   bold: 'Poppins-Bold',

@@ -2,6 +2,7 @@ import {createTheme} from '@shopify/restyle';
 
 const palette = {
   greenPrimary: '#00D09E',
+  greenDark: '#093030',
   greenPrimaryLight: '#DFF7E2',
   greenPrimaryHoneydew: '#F1FFF3',
   greenSuccessLight: '#D8FFEC',
@@ -36,7 +37,7 @@ export const theme = createTheme({
     buttonPrimary: palette.greenPrimary,
 
     background: palette.greenPrimaryHoneydew,
-    backgroundContrast: palette.grayBlack,
+    backgroundContrast: palette.greenDark,
 
     error: palette.redError,
     errorLight: palette.redErrorLight,

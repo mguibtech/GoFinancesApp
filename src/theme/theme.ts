@@ -39,6 +39,9 @@ export const theme = createTheme({
     background: palette.greenPrimaryHoneydew,
     backgroundContrast: palette.greenDark,
 
+    backgroundHeader: palette.greenPrimary,
+    backgroundHeaderContrast: palette.greenDark,
+
     error: palette.redError,
     errorLight: palette.redErrorLight,
   },

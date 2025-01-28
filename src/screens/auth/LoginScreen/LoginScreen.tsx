@@ -1,14 +1,12 @@
 import React from 'react';
-import {Text} from '../../../components/Text/Text';
 import {Button} from '../../../components/Button/Button';
 import {TextInput} from '../../../components/TextInput/TextInput';
 import {Icon} from '../../../components/Icon/Icon';
-import {Screen} from '../../../components/Screen/Screen';
+import {Screen} from '../../../components/Screen/ScreenAuth/Screen';
 
 export function LoginScreen() {
   return (
-    <Screen>
-      <Text>Tela de login</Text>
+    <Screen title="Welcome">
       <Button title="Botao de login" disabled />
       <TextInput
         placeholder="Digite seu e-mail"

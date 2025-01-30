@@ -29,18 +29,23 @@ export function TextInput({
     flexDirection: 'row',
     borderWidth: errorMessage ? 2 : 0,
     borderColor: errorMessage ? 'error' : undefined,
-    padding: 's14',
+    padding: 's8',
     borderRadius: 's20',
   };
 
   return (
     <Box {...boxProps}>
-      <Text preset="paragraphSmall" color="backgroundContrast" mb="s8" ml="s12">
+      <Text
+        preset="paragraphSmall"
+        color="backgroundContrast"
+        mb="s8"
+        ml="s12"
+        semiBold>
         {label}
       </Text>
       <Box {...$textInputContainer}>
         <RNTextInput
-          placeholderTextColor={colors.gray1}
+          placeholderTextColor={colors.gray3}
           autoCapitalize="none"
           style={$textInputStyle}
           {...textInputProps}
@@ -65,8 +70,7 @@ const $textInputStyle: TextStyle = {
   flexShrink: 1,
   padding: 0,
   marginLeft: 15,
-  textAlignVertical: 'center',
-  // backgroundColor: "#000",
+  justifyContent: 'center',
   color: '#093030',
   fontFamily: $fontFamily.regular,
   ...$fontSizes.paragraphMedium,

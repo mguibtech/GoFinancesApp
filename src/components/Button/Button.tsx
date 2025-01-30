@@ -23,7 +23,7 @@ export function Button({
   return (
     <TouchableOpacityBox
       disabled={disabled || loading}
-      height={45}
+      height={35}
       width={207}
       alignItems="center"
       justifyContent="center"

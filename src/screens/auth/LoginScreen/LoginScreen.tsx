@@ -26,7 +26,7 @@ export function LoginScreen() {
       <Text textAlign="center" mb="s14" preset="paragraphCaption" bold>
         Forgot Password?
       </Text>
-      <Button title="Sign Up" preset="outline" />
+      <Button title="Cirar conta" preset="outline" />
 
       <Box mt="s12" justifyContent="center" alignItems="center">
         <Text semiBold preset="paragraphSmall" mt="s14">
@@ -46,7 +46,7 @@ export function LoginScreen() {
         <Text preset="paragraphCaptionSmall">
           Dont't have an account?{' '}
           <Text preset="paragraphCaptionSmall" color="lightBlue">
-            Sing Up
+            Criar contar
           </Text>
         </Text>
       </Box>

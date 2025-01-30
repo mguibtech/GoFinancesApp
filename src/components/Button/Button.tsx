@@ -23,11 +23,12 @@ export function Button({
   return (
     <TouchableOpacityBox
       disabled={disabled || loading}
-      paddingHorizontal="s20"
-      height={50}
+      height={45}
+      width={207}
       alignItems="center"
       justifyContent="center"
-      borderRadius="s16"
+      alignSelf="center"
+      borderRadius="s32"
       {...buttonPreset.container}
       {...touchableOpacityBoxProps}>
       {loading ? (

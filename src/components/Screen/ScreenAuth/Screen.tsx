@@ -37,8 +37,8 @@ export function Screen({
         <Box
           backgroundColor="background"
           flex={1}
-          borderTopLeftRadius="s32"
-          borderTopRightRadius="s32">
+          borderTopLeftRadius="s60"
+          borderTopRightRadius="s60">
           <Box
             paddingBottom="s24"
             paddingHorizontal="s24"
@@ -48,7 +48,7 @@ export function Screen({
                 // onPress={navigation.goBack}
                 mb="s24"
                 flexDirection="row">
-                <Icon name="EyeOffIcon" color="primary" />
+                <Icon name="EyeOff" color="primary" />
                 <Text preset="paragraphMedium" semiBold ml="s8">
                   Voltar
                 </Text>

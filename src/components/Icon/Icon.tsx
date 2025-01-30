@@ -5,6 +5,8 @@ import {EyeOnIcon} from '../../assets/icons/EyeOnIcon';
 import {useAppTheme} from '../../hooks/useAppTheme';
 import {ThemeColors} from '../../theme/theme';
 import {Pressable} from 'react-native';
+import {FacebookIcon} from '../../assets/icons/FacebookIcon';
+import {GoogleIcon} from '../../assets/icons/GoogleIcon';
 
 export interface IconBase {
   size?: number;
@@ -38,7 +40,9 @@ export function Icon({
 
 const iconRegistry = {
   eyeOn: EyeOnIcon,
-  EyeOffIcon: EyeOffIcon,
+  EyeOff: EyeOffIcon,
+  facebook: FacebookIcon,
+  google: GoogleIcon,
 };
 
 type IconType = typeof iconRegistry;

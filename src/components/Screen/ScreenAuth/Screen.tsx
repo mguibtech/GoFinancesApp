@@ -14,6 +14,7 @@ interface ScreenProps {
   canGoBack?: boolean;
   scrollable?: boolean;
   title?: string;
+  component?: React.ReactElement;
 }
 
 export function Screen({
@@ -21,6 +22,7 @@ export function Screen({
   canGoBack = false,
   scrollable = false,
   title,
+  component,
 }: ScreenProps) {
   const {top, bottom} = useAppSafeArea();
   const {colors} = useAppTheme();
@@ -33,7 +35,7 @@ export function Screen({
       style={{flex: 1}}
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <Container backgroundColor={colors.backgroundHeader}>
-        <ScreenHeader title={title} />
+        <ScreenHeader title={title} component={component} />
         <Box
           backgroundColor="background"
           flex={1}
@@ -48,7 +50,7 @@ export function Screen({
                 // onPress={navigation.goBack}
                 mb="s24"
                 flexDirection="row">
-                <Icon name="EyeOff" color="primary" />
+                <Icon name="eyeOff" color="primary" />
                 <Text preset="paragraphMedium" semiBold ml="s8">
                   Voltar
                 </Text>

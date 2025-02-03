@@ -8,7 +8,7 @@ import {Box} from '../../../components/Box/Box';
 
 export function LoginScreen() {
   return (
-    <Screen title="Mozim">
+    <Screen title="Bem vindo!">
       <TextInput
         placeholder="Digite seu e-mail"
         label="Username Or Email"
@@ -19,7 +19,7 @@ export function LoginScreen() {
         placeholder="Informe sua senha"
         label="Password"
         boxProps={{mt: 's24'}}
-        rightComponent={<Icon name="EyeOff" />}
+        rightComponent={<Icon name="eyeOff" />}
       />
 
       <Button title="Log In" mt="s56" mb="s16" />

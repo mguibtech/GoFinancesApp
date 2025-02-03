@@ -6,11 +6,17 @@ import {Icon} from '../../../Icon/Icon';
 interface ScreenHeaderProps {
   canGoBack?: boolean;
   title?: string;
+  component?: React.ReactElement;
 }
 
-export function ScreenHeader({canGoBack, title}: ScreenHeaderProps) {
+interface HeaderWithIconProps {
+  title?: string;
+  component?: React.ReactElement;
+}
+
+export function ScreenHeader({canGoBack, title, component}: ScreenHeaderProps) {
   return (
-    <Box marginTop="s56" marginBottom="s56" paddingHorizontal="s10">
+    <Box marginTop="s40" marginBottom="s56" paddingHorizontal="s10">
       {canGoBack ? (
         <Box
           // onPress={navigation.goBack}
@@ -20,7 +26,7 @@ export function ScreenHeader({canGoBack, title}: ScreenHeaderProps) {
           justifyContent="space-between"
           flexDirection="row">
           <TouchableOpacityBox flexDirection="row">
-            <Icon name="EyeOff" color="backgroundHeaderContrast" />
+            <Icon name="eyeOff" color="backgroundHeaderContrast" />
             <Text preset="paragraphMedium" semiBold ml="s8">
               Voltar
             </Text>
@@ -31,12 +37,19 @@ export function ScreenHeader({canGoBack, title}: ScreenHeaderProps) {
           <Box width={80} />
         </Box>
       ) : (
-        <Box alignItems="center">
-          <Text preset="headingLarge" ml="s8">
-            {title}
-          </Text>
-        </Box>
+        <HeaderWithIcon title={title} component={component} />
       )}
+    </Box>
+  );
+}
+
+export function HeaderWithIcon({title, component}: HeaderWithIconProps) {
+  return (
+    <Box>
+      <Box mb="s10">{component}</Box>
+      <Text preset="headingLarge" ml="s8">
+        {title}
+      </Text>
     </Box>
   );
 }

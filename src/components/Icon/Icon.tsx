@@ -7,6 +7,7 @@ import {ThemeColors} from '../../theme/theme';
 import {Pressable} from 'react-native';
 import {FacebookIcon} from '../../assets/icons/FacebookIcon';
 import {GoogleIcon} from '../../assets/icons/GoogleIcon';
+import {CheckRoundIcon} from '../../assets/icons/CheckRoundIcon';
 
 export interface IconBase {
   size?: number;
@@ -40,9 +41,10 @@ export function Icon({
 
 const iconRegistry = {
   eyeOn: EyeOnIcon,
-  EyeOff: EyeOffIcon,
+  eyeOff: EyeOffIcon,
   facebook: FacebookIcon,
   google: GoogleIcon,
+  checkRound: CheckRoundIcon,
 };
 
 type IconType = typeof iconRegistry;

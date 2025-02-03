@@ -8,6 +8,7 @@ import {Text} from '../../Text/Text';
 import {Box, TouchableOpacityBox} from '../../Box/Box';
 import {useAppSafeArea} from '../../../hooks/useAppSafeArea';
 import {ScreenHeader} from './components/ScreenHeader';
+import {useNavigation} from '@react-navigation/native';
 
 interface ScreenProps {
   children: React.ReactNode;
@@ -26,7 +27,7 @@ export function Screen({
 }: ScreenProps) {
   const {top, bottom} = useAppSafeArea();
   const {colors} = useAppTheme();
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
 
   const Container = scrollable ? ScrollViewContainer : ViewContainer;
 
@@ -38,16 +39,13 @@ export function Screen({
         <ScreenHeader title={title} component={component} />
         <Box
           backgroundColor="background"
-          flex={1}
           borderTopLeftRadius="s60"
-          borderTopRightRadius="s60">
-          <Box
-            paddingBottom="s24"
-            paddingHorizontal="s24"
-            style={{paddingTop: top, paddingBottom: bottom}}>
+          borderTopRightRadius="s60"
+          style={{paddingTop: top, paddingBottom: bottom}}>
+          <Box paddingHorizontal="s24">
             {canGoBack && (
               <TouchableOpacityBox
-                // onPress={navigation.goBack}
+                onPress={navigation.goBack}
                 mb="s24"
                 flexDirection="row">
                 <Icon name="eyeOff" color="primary" />

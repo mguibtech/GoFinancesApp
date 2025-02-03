@@ -9,8 +9,9 @@ export function SuccessScreen() {
     <Screen
       component={<Icon name="checkRound" size={48} color="FenceGreen" />}
       title="Sua conta foi criada com sucesso!">
-      <Text preset="headingLarge" mt="s24"></Text>
-      <Text preset="paragraphLarge" mt="s16"></Text>
+      <Text preset="paragraphLarge" mt="s40">
+        Agora é só fazer login na nossa plataforma
+      </Text>
       <Button title="Voltar ao inicio" preset="primary" mt="s40" />
     </Screen>
   );

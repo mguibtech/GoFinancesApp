@@ -8,7 +8,7 @@ import {Box} from '../../../components/Box/Box';
 
 export function LoginScreen() {
   return (
-    <Screen title="Bem vindo!">
+    <Screen scrollable title="Bem vindo!">
       <TextInput
         placeholder="Digite seu e-mail"
         label="Username Or Email"
